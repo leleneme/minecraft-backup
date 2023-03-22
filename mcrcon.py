@@ -19,6 +19,7 @@ class IncompletePacket(Exception):
 class MCRcon:
     def __init__(self) -> None:
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock.settimeout(10)
         self.connected = False
         self.logged_in = False
 
