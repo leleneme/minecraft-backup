@@ -25,7 +25,8 @@ def main():
         description='Connects to RCON and automatically backups the Minecraft World'
     )
 
-    parser.add_argument('--host', dest='host', required=True)
+    parser.add_argument('--host', dest='host',
+                        required=False, default='localhost')
     parser.add_argument('--port', dest='port', type=int,
                         required=False, default=25575)
     parser.add_argument('--password', dest='password', required=True)
